@@ -24,22 +24,14 @@
   flex-flow: column wrap;
 }
 
-.tape__title {
+.line:first-child {
   height: 36px;
   background: linear-gradient(
     white, white 33px,
     var(--red) 35px, var(--red) 36px);
 }
 
-.tape__desc {
-  height: 27px;
-  background: repeating-linear-gradient(
-    white, white 25px,
-    var(--light-grey) 26px, var(--light-grey) 27px
-   );
-}
-
-.tape__station {
+.line:not(:first-child) {
   height: 27px;
   background: repeating-linear-gradient(
     white, white 25px,
