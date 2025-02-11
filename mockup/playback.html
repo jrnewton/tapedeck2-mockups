@@ -12,6 +12,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monofett&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="playback.css">
+  <script>
+    function docReady(callback) {
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", callback);
+      } else {
+        callback();
+      }
+    }
+
+    function toggleHidden(elem) {
+      const hidden = elem.classList.contains("hidden");
+      if (hidden) {
+        console.log("toggle hidden off");
+        elem.classList.remove("hidden");
+      }
+      else {
+        console.log("toggle hidden on");
+        elem.classList.add("hidden");
+      }
+    }
+
+    docReady(() => {
+      const elems = document.querySelectorAll(".tape__section");
+      for (const e of elems) {
+        const coverEl = e.querySelector(".tape__cover");
+        if (coverEl !== null) {
+          e.addEventListener("click", (event) => {
+          toggleHidden(coverEl);
+        });
+        }
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -19,11 +52,20 @@
     <header><a href="index.html">PLAYBACK</a></header>
     <main>
       <section class="tape__section">
-          <div class="line tape__title">
+        <a href="#">
+          <div class="tape__spine">
+            <div class="tape__station">WMBR</div>
+            <div class="tape__title">
+              French Toast / Mar 30, 2022
+            </div>
+          </div>
+        </a>
+        <div class="tape__cover hidden">
+          <div class="line">
             French Toast / Mar 30, 2022
           </div>
-          <div class="line tape__desc">All 80s songs</div>
-          <div class="line tape__station">WMBR</div>
+          <div class="line">All 80s songs</div>
+          <div class="line">WMBR</div>
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
@@ -31,6 +73,27 @@
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
+        </div>
+      </section>
+      <section class="tape__section">
+        <a href="#">
+          <div class="tape__spine">
+            <div class="tape__station">WUMB</div>
+            <div class="tape__title">
+              Odyssey / Sept 17, 2022
+            </div>
+          </div>
+        </a>
+      </section>
+      <section class="tape__section">
+        <a href="#">
+          <div class="tape__spine">
+            <div class="tape__station">WMBR</div>
+            <div class="tape__title">
+              The SurreaList / Oct 12, 2023
+            </div>
+          </div>
+        </a>
       </section>
     </main>
     <footer>

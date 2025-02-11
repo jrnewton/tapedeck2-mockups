@@ -1,3 +1,15 @@
+/* 
+  Style the list of 'tapes'.  Right now it's a basic
+  tape cover spine with a red label on left and text
+  in the rest.
+*/
+
+/* 
+TODO: server-side render whole/part of this stylesheet
+      to allow for custom color and font to be used
+      with out javascript.
+*/
+
 :root {
   --pink: rgba(255,91,158,1);
   --yellow: rgba(234,243,44,1);
@@ -12,16 +24,44 @@
 .tape__section {
   margin: 0.2rem 0;
   background-color: white;
+  border: 2px solid black;
   width: 90%;
   min-width: 90%;
   max-width: 90%;
+}
 
-  padding: 0.6rem;
+.tape__section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
-  border-radius: 8px 8px 0 0;
+.tape__section:active,
+.tape__section:hover {
+  border-color: var(--dark-grey);
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
+.tape__spine {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
+}
+
+.tape__station {
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  color: white;
+  background-color: var(--red);
+  padding: 0.5rem;
+}
+
+.tape__title {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5rem;
+  text-transform: uppercase;
 }
 
 .line:first-child {
@@ -37,4 +77,8 @@
     white, white 25px,
     var(--light-grey) 26px, var(--light-grey) 27px
    );
+}
+
+.hidden {
+  display: none;
 }
