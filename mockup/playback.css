@@ -1,0 +1,48 @@
+:root {
+  --pink: rgba(255,91,158,1);
+  --yellow: rgba(234,243,44,1);
+  --orange: rgba(250,161,7,1);
+  --blue: rgba(143,227,255,1);
+  --light-grey: rgba(114, 114, 114, 1);
+  --light-grey-opaque: rgba(114, 114, 114, 0.5);
+  --dark-grey: rgba(77, 77, 77, 1);
+  --red: rgba(252, 11, 11, 1);
+}
+
+.tape__section {
+  margin: 0.2rem 0;
+  background-color: white;
+  width: 90%;
+  min-width: 90%;
+  max-width: 90%;
+
+  padding: 0.6rem;
+
+  border-radius: 8px 8px 0 0;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.tape__title {
+  height: 36px;
+  background: linear-gradient(
+    white, white 33px,
+    var(--red) 35px, var(--red) 36px);
+}
+
+.tape__desc {
+  height: 27px;
+  background: repeating-linear-gradient(
+    white, white 25px,
+    var(--light-grey) 26px, var(--light-grey) 27px
+   );
+}
+
+.tape__station {
+  height: 27px;
+  background: repeating-linear-gradient(
+    white, white 25px,
+    var(--light-grey) 26px, var(--light-grey) 27px
+   );
+}
