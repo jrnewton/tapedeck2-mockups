@@ -64,11 +64,20 @@ TODO: server-side render whole/part of this stylesheet
   text-transform: uppercase;
 }
 
+.tape__cover {
+  padding-top: 0.5rem;
+}
+
 .line:first-child {
-  height: 36px;
+  /* height: 36px;
   background: linear-gradient(
     white, white 33px,
-    var(--red) 35px, var(--red) 36px);
+    var(--red) 35px, var(--red) 36px); */
+  height: 27px;
+  background: repeating-linear-gradient(
+    white, white 25px,
+    var(--red) 26px, var(--red) 27px
+   );
 }
 
 .line:not(:first-child) {
