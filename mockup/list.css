@@ -1,0 +1,65 @@
+/* 
+  Style the list of 'tapes'.  Right now it's a basic
+  tape cover spine with a red label on left and text
+  in the rest.
+*/
+
+/* 
+TODO: server-side render whole/part of this stylesheet
+      to allow for custom color and font to be used
+      with out javascript.
+*/
+
+:root {
+  /* these are based on the favicon image */
+  --light-grey: #727272;
+  --dark-grey: #4D4D4D;
+  --red: #FC0B0B;
+}
+
+body {
+  font-weight: normal;
+}
+
+.tape__section {
+  margin: 0.2rem 0;
+  background-color: white;
+  border: 2px solid black;
+  width: 90%;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+.tape__section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tape__section:active,
+.tape__section:hover {
+  border-color: var(--dark-grey);
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tape__spine {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tape__station {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: white;
+  background-color: var(--red);
+  padding: 0.6rem;
+}
+
+.tape__title {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}

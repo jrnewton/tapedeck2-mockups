@@ -15,10 +15,14 @@
 
 :root {
   /* these are based on the favicon image */
-  --pink: rgba(255,91,158,255);
-  --yellow: rgba(234,243,44,255);
-  --orange: rgba(250,161,7,255);
-  --blue: rgba(143,227,255,255);
+  --pink: rgba(255,91,158,1);
+  --yellow: rgba(234,243,44,1);
+  --orange: rgba(250,161,7,1);
+  --blue: rgba(143,227,255,1);
+  --light-grey: rgba(114, 114, 114, 1);
+  --light-grey-opaque: rgba(114, 114, 114, 0.5);
+  --dark-grey: rgba(77, 77, 77, 1);
+  --red: rgba(252, 11, 11, 1);
 }
 
 * {
@@ -46,7 +50,7 @@ body {
 
 #flex-content {
   margin: 1em;
-    display: flex;
+  display: flex;
   flex-flow: column wrap;
   /* required so element can be centered */
   width: 100%;
@@ -79,11 +83,11 @@ main {
 .button {
   display: flex;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--light-grey-opaque);
   text-decoration: none;
   font-size: 1rem;
 
-  border: 1.5px solid black;
+  border: 1.5px solid var(--dark-grey);
   border-radius: 8px;
 
   padding: 1rem;
