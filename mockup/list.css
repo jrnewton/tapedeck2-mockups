@@ -17,10 +17,6 @@ TODO: server-side render whole/part of this stylesheet
   --red: #FC0B0B;
 }
 
-body {
-  font-weight: normal;
-}
-
 .tape__section {
   margin: 0.2rem 0;
   background-color: white;
@@ -51,10 +47,10 @@ body {
 .tape__station {
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: white;
   background-color: var(--red);
-  padding: 0.6rem;
+  padding: 0.5rem;
 }
 
 .tape__title {
