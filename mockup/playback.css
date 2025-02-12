@@ -65,7 +65,8 @@ TODO: server-side render whole/part of this stylesheet
 }
 
 .tape__cover {
-  padding-top: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  
 }
 
 .line:first-child {
