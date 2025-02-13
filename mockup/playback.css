@@ -30,6 +30,7 @@ TODO: server-side render whole/part of this stylesheet
   max-width: 90%;
 }
 
+.tape__spine a,
 .tape__section a {
   text-decoration: none;
   color: inherit;
@@ -66,7 +67,6 @@ TODO: server-side render whole/part of this stylesheet
 
 .tape__cover {
   padding: 0.5rem 0.5rem 0 0.5rem;
-  
 }
 
 .line:first-child {
