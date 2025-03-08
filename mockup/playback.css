@@ -30,8 +30,7 @@ TODO: server-side render whole/part of this stylesheet
   max-width: 90%;
 }
 
-.tape__spine a,
-.tape__section a {
+.block {
   text-decoration: none;
   color: inherit;
   display: block;
@@ -63,6 +62,7 @@ TODO: server-side render whole/part of this stylesheet
   flex-flow: row wrap;
   padding: 0.5rem;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .tape__cover {

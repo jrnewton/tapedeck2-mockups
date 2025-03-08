@@ -34,11 +34,22 @@
     }
 
     docReady(() => {
+      /* The station part of the spine will go direct to player 
+         while the title part of the spine will expand the tape
+         cover.  Clicking the cover will also toggle the display.
+      */
+
+      /* for each section, get the title and cover and setup
+         click listeners */
       const elems = document.querySelectorAll(".tape__section");
       for (const e of elems) {
+        const titleEl = e.querySelector(".tape__title");
         const coverEl = e.querySelector(".tape__cover");
         if (coverEl !== null) {
-          e.addEventListener("click", (event) => {
+          coverEl.addEventListener("click", (event) => {
+            toggleHidden(coverEl);
+          });
+          titleEl.addEventListener("click", (event) => {
             toggleHidden(coverEl);
           });
         }
@@ -52,9 +63,9 @@
     <header><a href="index.html">PLAYBACK</a></header>
     <main>
       <section class="tape__section">
-        <a href="#">
+        <a href="#" class="block">
           <div class="tape__spine">
-            <div class="tape__station">WMBR</div>
+            <a href="player.html" class="tape__station block">WMBR</a>
             <div class="tape__title">
               French Toast / Mar 30, 2022
             </div>
@@ -72,24 +83,44 @@
         </div>
       </section>
       <section class="tape__section">
-        <a href="#">
+        <a href="#" class="block">
           <div class="tape__spine">
-            <div class="tape__station">WUMB</div>
+            <a href="player.html" class="tape__station block">WUMB</a>
             <div class="tape__title">
               Odyssey / Sep 17, 2022
             </div>
           </div>
         </a>
+        <div class="tape__cover hidden">
+          <div class="line">Eastern Europe Fiddle tunes</div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div>Downloaded on Sep 17</div>
+        </div>
       </section>
       <section class="tape__section">
-        <a href="#">
+        <a href="#" class="block">
           <div class="tape__spine">
-            <div class="tape__station">WMBR</div>
+            <a href="player.html" class="tape__station block">WMBR</a>
             <div class="tape__title">
               The SurreaList / Oct 12, 2023
             </div>
           </div>
         </a>
+        <div class="tape__cover hidden">
+          <div class="line">Bird songs</div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div>Downloaded on Oct 13</div>
+        </div>
       </section>
     </main>
     <footer>
