@@ -63,10 +63,18 @@ TODO: server-side render whole/part of this stylesheet
   padding: 0.5rem;
   text-transform: uppercase;
   width: 100%;
+
+  /* dimensions fixed like a physical cover */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .tape__cover {
   padding: 0.5rem 0.5rem 0 0.5rem;
+  /* dimensions fixed like a physical cover */
+  min-height: 15rem;
+  max-height: 15rem;
+  overflow: hidden;
 }
 
 .line:first-child {
